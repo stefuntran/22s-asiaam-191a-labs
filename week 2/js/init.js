@@ -1,32 +1,29 @@
-console.log("Javascript test :)")
-// JavaScript const variable declaration
-const map = L.map('the_map').setView([34.0709, -118.444], 15); 
+// declare variables
+let zoomLevel = 5;
+const mapCenter = [38.4632418,-121.4230084];
 
-// Leaflet tile layer, i.e. the base map
+// use the variables
+const map = L.map('the_map').setView(mapCenter, zoomLevel);
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map); 
+}).addTo(map);
 
-//JavaScript let variable declaration to create a marker
-let marker = L.marker([34.0709, -118.444]).addTo(map) 
-        .bindPopup('Math Sciences 4328 aka the Technology Sandbox<br> is the lab where I work in ')
-        .openPopup();
-
-
-//let marker2 = L.marker([38.456848, -121.410759]).addTo(map) 
-        //.bindPopup('Cosumnes River College<br> is the community college I attended before transferring to UCLA ')
-        //.openPopup();
-
-function my_first_function(){
-    console.log('hi');
+// create a function to add markers
+function addMarker(lat,lng,title,message){
+    console.log(message)
+    L.marker([lat,lng]).addTo(map).bindPopup(`<h2>${title}</h2>`)
+    //createButtons(lat,lng,title,message); // new line!!!
+    return message
 }
 
-my_first_function()
+// use our marker functions
+addMarker(34.06999972,-118.439789907 ,'UCLA, Where I go to school now.')
+addMarker(38.4632418,-121.4230084 ,'Herman Leimbach Elementary School. This is where I went K-6.')
+addMarker(38.4485,-121.394173578,'Edward Harris Middle School. This is where I went 7th-8th grade.')
+addMarker(38.450110,-121.395860,'Monterey Trail High School. This is where I went 9th-12th grade.')
+addMarker(38.454182,-121.427177,'Cosumnes River College. This is where I went for community college. I went to all three throughout my two years.')
+addMarker(38.540611,-121.489388,'Sacramento City College. This is where I went for community college. I went to all three throughout my two years.')
+addMarker(38.662601,-121.126930,'Folsom Lake College 3. This is where I went for community college. I went to all three throughout my two years.')
 
-function add_marker(lat,lng, popup){
-    L.marker([lat,lng]).addTo(map) 
-        .bindPopup(popup)
-        //.openPopup();
-}
-
-add_marker(38.456848,-121.410759,'Hello marker form function')
+ 
