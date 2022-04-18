@@ -40,10 +40,10 @@ function createButton(lat,lng, title){
 
     })
 
-    document.getElementById("contents").appendChild(newButton);
+    document.getElementById("placeforbuttons").appendChild(newButton);
 }   
 
-fetch("lab3.geojson")
+fetch("lab3_1.geojson")
     .then(response => {
         return response.json()
     })
@@ -54,7 +54,7 @@ fetch("lab3.geojson")
                     return L.circleMarker(latlng, {color: feature.properties.color})
                 }
             }).bindPopup(layer => {
-                return layer.feature.properties.place;
+                return layer.feature.properties.Places;
             }).addTo(map);
 })
 
