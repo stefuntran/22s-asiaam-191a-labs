@@ -1,5 +1,5 @@
 // declare variables
-let mapOptions = {"mapCenter": [34.0709,-118.444], "zoomLevel": 7};
+let mapOptions = {"mapCenter": [34.0709,-118.444], "zoomLevel": 10};
 
 const map = L.map('the_map').setView(mapOptions.mapCenter, mapOptions.zoomLevel);
 
