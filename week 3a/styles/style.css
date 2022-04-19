@@ -31,9 +31,17 @@ p{
 h2{
     color: skyblue;
 }
+hr.solid {
+    border-top: 5px solid blue;
+  }
+
+h5{
+    text-align: left;
+}
 
 #footer{
     grid-area: footer;
+    text-align: left;
 }
 
 .main{
@@ -42,6 +50,16 @@ h2{
     grid-template-areas: "mappanel" "content";
     text-align: center;
 }
+
+.map_header{
+    color: blue;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    
+    font-size: 30px;
+    
+}
+
 
 #the_map{
     height:80vh; 
@@ -74,4 +92,8 @@ h2{
 .footer{
     padding: 70px 0;
     border: 3px solid green;
+    
 }
+
+
+
