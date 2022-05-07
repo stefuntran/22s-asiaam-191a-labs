@@ -1,0 +1,135 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-auto-rows: minmax(5px, auto);
+    grid-template-areas: "header" "main_content" "footer";
+    background-color: beige;
+    height: 100vh;
+}
+
+header{
+    grid-area: header;
+    text-align: center;
+    color: blue;
+    background: beige;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.fit-picture {
+    width: 500px;
+    height: 500px;
+    text-align: center;
+}
+
+p{
+    color:black;
+    font-size: larger;
+}
+
+h2{
+    color: skyblue;
+}
+hr.solid {
+    border-top: 5px solid blue;
+  }
+
+h5{
+    text-align: left;
+}
+
+#footer{
+    grid-area: footer;
+    text-align: left;
+}
+
+.main{
+    display: grid;
+    grid-area: main_content;
+    grid-template-areas: "mappanel" "content";
+    text-align: center;
+}
+
+.map_header{
+    color: blue;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    
+    font-size: 30px;
+    
+}
+
+
+#the_map{
+    height:80vh; 
+    grid-area: mappanel;
+}
+
+#contents{
+    grid-area: content;
+}
+
+* {
+    box-sizing: border-box;
+}
+ 
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    
+}
+  
+  /* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+} 
+
+
+.footer{
+    padding: 70px 0;
+    border: 3px solid green;
+    
+}
+
+/* Style the navigation menu */
+.navbar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+  }
+  
+  /* Navigation links */
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 33.33%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    text-align: center; /* If you want the text to be centered */
+  }
+  
+  /* Add a background color on mouse-over */
+  .navbar a:hover {
+    background-color: #000;
+  }
+  
+  /* Style the current/active link */
+  .navbar a.active {
+    background-color: #04AA6D;
+  }
+  
+  /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left; /* If you want the text to be left-aligned on small screens */
+    }
+  }
+
